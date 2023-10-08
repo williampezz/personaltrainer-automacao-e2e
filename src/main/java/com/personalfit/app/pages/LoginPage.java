@@ -15,4 +15,8 @@ public class LoginPage extends BasePage {
     public void clickEnter() {
         findElementByAccessibilityId("Entrar").click();
     }
+
+    public void loginFalse() {
+        findElementByAccessibilityId("Dados de login incorretos");
+    }
 }
