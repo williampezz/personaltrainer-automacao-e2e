@@ -37,6 +37,8 @@ public class LoginTest extends BaseTest {
         home.selectTypePersonal();
         login.insertEmail("brunofsimon@outlook.com");
         login.insertPass("2154!@");
+        login.clickEnter();
+        login.loginFalse();
     }
 
     }
