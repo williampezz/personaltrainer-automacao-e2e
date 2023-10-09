@@ -20,4 +20,22 @@ public class SignUpPage extends BasePage {
     public void confirmeEmail(String confEmail) {
         sendKeysByXpath("//android.widget.EditText[@index=1]", confEmail);
     }
+
+    public void createPass(String cadPass) {
+        sendKeysByXpath("//android.widget.EditText[@index=2]", cadPass);
+    }
+
+    public void confirmePass(String confPass) {
+        sendKeysByXpath("//android.widget.EditText[@index=3]", confPass);
+    }
+
+    public void clickCreateAccount() {
+        findElementByXpath("//android.widget.Button[@content-desc=\"Criar conta\"]").click();
+    }
+
+    public void accountOk() {
+        findElementByAccessibilityId("Conta criada com sucesso!");
+
+
+    }
 }

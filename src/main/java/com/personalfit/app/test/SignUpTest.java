@@ -7,7 +7,7 @@ import com.personalfit.app.utils.GenerateEmail;
 import io.appium.java_client.MobileElement;
 import org.junit.Test;
 
-public class SignUpTest extends GenerateEmail {
+public class SignUpTest extends BaseTest {
 
     GenerateEmail emailGenerator = new GenerateEmail();
     String generatedEmail = emailGenerator.genEmailRandom();
@@ -21,5 +21,8 @@ public class SignUpTest extends GenerateEmail {
         signUp.signUpButton();
         signUp.createEmail(generatedEmail+"@test.com");
         signUp.confirmeEmail(emailGenerator.getGeneratedEmail());
+        signUp.createPass("123456");
+        signUp.confirmePass("123456");
+        signUp.clickCreateAccount();
     }
 }
